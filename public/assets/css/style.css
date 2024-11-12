@@ -1,0 +1,306 @@
+* {
+   box-sizing: border-box;
+}
+
+aside {
+   float: right; /*terapkan properti float dengan nilai right pada elemen <aside>.*/
+   padding-left: 20px; /*Memberikan sedikit jarak antara #content dan aside agar tidak nampak berhimpitan. Sehingga 
+                         aside yang ditampilkan lebih menjorok ke kiri.*/
+   width: 25%; /*Jangan lupa untuk menetapkan lebar pada elemennya. Karena sebelumnya 
+   elemen content sudah menerapkan 75% lebar dari parent, berarti elemen aside hanya dapat 
+   memiliki 25% ruang yang tersedia untuk ditempati. Silakan tetapkan nilai 25% pada properti 
+   width untuk elemen aside.*/
+}
+
+.blood {
+   text-align: left;
+}
+
+body {
+   font-family: 'Quicksand', sans-serif; /*Mengubah font-family pada body menjadi ‘Quicksand’*/
+   margin: 0; /*Hilangkan nilai margin standar browser*/
+   padding: 0; /*Hilangkan nilai padding standar browser*/
+}
+
+.box {
+   transition: 1s; /*Untuk menentukan berapa detik atau milidetik yang diperlukan untuk menyelesaikan efek transisi */
+}
+
+.box:hover {
+   transform: scale(1.1); /*Mengatur 'Ukuran elemen div akan berskala 1,1 kali saat pengguna mengarahkan kursor ke atasnya.'*/
+}
+
+.card {
+   border-radius: 5px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /*box-shadow:  offset-x offset-y blur-radius spread-radius color;*/
+   margin-top: 5px; /*Margin merupakan ruang atau jarak pada sebuah elemen. Namun jarak tersebut terletak di luar dari konten dan border elemen. */
+   padding: 5px; /*Mengatur jarak dari dalam*/
+}
+
+.content {
+   float: left; /* membuat posisi elemen content disebelah kiri*/
+   width: 75%; /*digunakan nilai 75% untuk menetapkan lebar #content*/
+}
+
+.div-content {
+   margin-top: 0;
+   text-align: center;
+}
+
+/*Membuat kotak login*/
+.div-box {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /*hanya ini bisa diganti*/
+   border-radius: 5px; /*Membuat sudut kotak login tidak runcing*/
+   box-sizing: border-box;
+   /*border: solid 1px;*/
+   padding: 25px;
+   width:  100%; 
+}
+
+footer {
+   align-items: center;
+   background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url("../img/galaxy2.png");
+   background-position: center;
+   background-size: cover;
+   display: flex;/*Untuk membuat sebuah flex container digunakan properti display dengan nilai flex. 
+                 Dengan demikian seluruh anak dari container tersebut akan menjadi flex item.*/
+   color: white;
+   font-weight: bold; /*untuk memberikan efek ketebalan*/
+   justify-content: center; /*Sejajarkan item fleksibel di tengah wadah*/
+   text-align: center; /*Mengatur teks untuk rata tengah*/
+   padding: 20px;
+}
+
+form div {
+   margin-bottom: 15px; /*Membuat enter pada kotak input email dan password*/
+}
+
+form label {
+   display: block; /*Membuat antara label dengan input tidak satu baris*/
+   font-size: 20px; /*Memperbesar tulisan email dan password di halamlogin page*/
+}
+
+form input {
+   border: solid 1px;
+   box-sizing: border-box; /*Mengatur agar panjang kotak input email dan password tidak melebihi lebar border*/
+   font-size: 20px; /*Inputan huruf pada kotak email dan password*/
+   line-height: 1.8; /*Mempebesar tinggi kotak inputan login page*/
+   width: 100%; /*Mengatur pendek/panjang kotak inputan email dan password*/
+}
+
+.green{
+   color: #34e72b;
+   font-weight: bold;
+}
+
+header {
+   /*Elemen HTML yang secara default tidak menambahkan baris baru ketika dibuat.
+   Nilai lebar dan tinggi elemen inline sebesar konten di dalamnya, dan tidak dapat diubah.
+   Margin dan padding hanya mempengaruhi elemen secara horizontal, tidak vertikal*/
+  display: inline;
+}
+
+h2 {
+   color: #848DE8;
+}
+
+/*.jumbotron {
+   font-size: 20px;
+   padding: 60px;
+   background-color: #00c8eb;
+   text-align: center;
+   color: white;
+}*/
+
+.jumbotron { 
+   /*width: 100%;*/
+   align-items: center;
+   background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url("../img/galaxy.png");
+   background-size: cover;
+   background-position: center;
+   color:  #fff;
+   display: flex;
+   flex-direction: column; /*membuat kolom dibawah*/
+   font-size: 20px;
+   justify-content: center;/*Sejajarkan item fleksibel di tengah wadah*/
+   /*height: 100vh;*/
+   padding: 60px;
+   text-align: center;
+}
+
+/*Style untuk datagrafik...php*/
+.kartu {
+    border: 1px;
+    border-color: #848DE8;
+    border-style: solid; /*jenis border*/
+    margin-bottom: 10px;
+}
+
+.ket {
+   font-weight: bold;
+}
+
+main {
+   overflow: auto; /*Agar #content dan elemen <aside> dianggap ada oleh <main> (sebagai induk elemennya) kita perlu tetapkan nilai overflow: auto; pada main.*/
+   padding: 20px; /*Memberi sedikit jarak agar konten di dalam elemen <main> yang ditampilkan sedikit nyaman untuk dilihat*/
+}
+
+/*Style induk login.php*/
+.mainn {
+   align-items:  center;
+   display:  flex;
+   height: 100vh;
+   justify-content: center;
+   
+}
+
+nav {
+   background-color: #313B64;
+   padding: 5px;
+   /*Dengan menggunakan nilai sticky pada properti position, membuat navigasi dapat melekat pada 
+   jendela browser (layaknya fixed position) tetapi posisi awalnya tetap menempati posisi di mana 
+   ia seharusnya berada (layaknya relative position).*/
+   position: sticky;
+   top: 0;
+   z-index: 10;
+}
+
+nav a {
+   color: white;
+   font-size: 17px;
+   font-weight: 400;
+   text-decoration: none; /*Menghilangkan garis bawah atau underline pada teks*/
+}
+
+/*Pseudo Selector :hover digunakan untuk menetapkan rule font bold ketika cursor diarahkan ke target elemen.*/
+nav a:hover {
+   font-weight: bold;
+}
+
+/*Memperbaiki tampilan navigasi agar terlihat cocok dengan header yang ditampilkan.*/
+nav li {
+   display: inline; /*Nilai inline pada properti display akan membuat elemen <li> menerapkan sifat inline, sehingga elemen akan ditampilkan tanpa membuat baris baru*/
+   list-style-type: none; /*berfungsi akan menghilangkan tanda titik yang dihasilkan tiap item pada list.*/
+   margin-right: 20px;
+}
+
+pre {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 15px;
+}
+
+.profile header { /*menentukan selector dengan mudah untuk mengatur <header> pada elemen <article>*/
+   display: block;
+   text-align: center;
+}
+
+/*Agar gambar profil tampak tidak terlalu besar kita atur properti width dengan nilai 200px. 
+Dibuatkan rules baru dengan selector .profile img, kemudian dituliskan properti width 
+dengan nilainya.*/
+.profile img { 
+   width: 200px;
+   /*height: 250px;*/
+}
+
+
+/*warna tulisan status*/
+.yellow{
+   color:  #c4f511;
+   font-weight: bold;
+}
+
+/*Rule .sheet tersebut akan membuat tabel memiliki lebar 100% terhadap parentnya*/
+.sheet {
+   border-collapse: collapse; 
+   text-align: center;
+   width: 100%;
+}
+
+/*Rule .sheet tersebut akan membuat tabel memiliki lebar 100% terhadap parentnya*/
+.sheettabel {
+   border-collapse: collapse; 
+   text-align: center;
+   width: 100%;
+}
+
+.red{
+   color: red;
+   font-weight: bold;
+}
+
+.sheettabel th,.sheettabel tr,.sheettabel td {
+   border: 1px solid #313B64; /*border:  size style color;*/
+}
+
+/* Rule styling .tgl::first-letter akan diterapkan pada karakter pertama disebuah paragraf */
+.tgl::first-letter {
+   color: saddlebrown;
+   font-size: 32px;
+   font-weight: bold;
+}
+
+.yellow{
+   color:  #a5cf0a;
+   font-weight: bold;
+}
+
+/* Jika ukuran layar 300px atau kurang dari itu */
+@media screen and (max-width: 300px) {
+  .content {
+      font-size: 5px;
+  }
+
+   nav {
+      padding: 5px;
+   }
+
+   nav a {
+      font-size: 12px;
+      font-weight: 400;
+   }
+
+   nav li {
+      margin-right: 10px;
+   }
+
+   pre{
+       font-size: 9px;
+  }
+
+   table{
+      font-size: 10px;
+   }
+   
+   .hdua {
+      font-size: 20px ;
+   }
+
+   .htiga {
+      font-size: 10px ;
+   }
+
+   .paragraf{
+      font-size: 10px ;
+   }
+}
+
+/* Jika ukuran layar 550px atau kurang dari itu */
+@media screen and (max-width: 550px) {
+   nav li {
+      margin-right: 10px;
+   }
+
+   nav {
+      padding: 2px;
+   }
+}
+
+/* Jika ukuran layar 1000px atau kurang dari itu */
+@media screen and (max-width: 1000px) {
+   .content,
+   aside {
+      padding: 0;
+      width: 100%;
+   }
+}
+
